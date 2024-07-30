@@ -1,4 +1,4 @@
-import Image from "next/image"
+"use client";
 import Input from "./Input"
 
 export default function Credential(){
@@ -6,10 +6,32 @@ export default function Credential(){
         
         <div>
             <div className="mb-4">
-                <Input type ="email" placeholder="Email" name="email"/>
+                <div className="w-full">
+                    <input
+                        type={type}
+                        placeholder={placeholder}
+                        value={value}
+                        autoComplete="new-password"
+                        onChange={(e) => `${set}`(e.target.value)}
+                        className="w-full max-w-md px-4 py-3 text-white border-none rounded-lg placeholder-gray bg-hover focus:outline-none focus:ring-none text-12px"
+                        required
+                    />
+                </div>
+            </div>
+            <div>
+                <div className="w-full">
+                    <input
+                        type={type}
+                        placeholder={placeholder}
+                        value={value}
+                        autoComplete="new-password"
+                        onChange={(e) => `${set}`(e.target.value)}
+                        className="w-full max-w-md px-4 py-3 text-white border-none rounded-lg placeholder-gray bg-hover focus:outline-none focus:ring-none text-12px"
+                        required
+                    />
+                </div>
             </div>
             
-            <Input type ="password" placeholder="Password" name="password"/>
             
        </div>
         

@@ -1,13 +1,40 @@
+"use client";
 
 import Button from '@components/Button';
-import Input from '@components/Input';
 import Logo from '@components/Logo';
 import Google from '@components/Google';
-import Image from 'next/image';
 import Link from 'next/link';
-import Credential from '@components/Credential';
+import { useRouter } from 'next/navigation';
+import { useState  } from 'react';
+import userPool from '@config/userPool';
 
 export default function SignUp() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const router = useRouter();
+
+    
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+    
+        userPool.signUp(email , password , [] , null , (err , data) => {
+            if(err){
+                console.log(err);
+            }
+            else {
+                console.log(data);
+                sessionStorage.setItem('email', email);
+                router.push('/auth/signup/confirm');
+
+            }
+        });
+      };
+
+
+
+
+    
   return (
     <div className="flex items-center justify-center h-screen bg-base">
         
@@ -22,15 +49,46 @@ export default function SignUp() {
             <Google />
         </div>
        <div>
-            <Credential/>
+        <form onSubmit={onSubmit} >
+       
+            <div className="mb-4">
+                <div className="w-full">
+                    <input
+                        type="email"
+                        placeholder= "Email"
+                        value={email}
+                        autoComplete="new-password"
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="w-full max-w-md px-4 py-3 text-white border-none rounded-lg placeholder-gray bg-hover focus:outline-none focus:ring-none text-12px"
+                        required
+                    />
+                </div>
+            </div>
+            <div>
+                <div className="w-full">
+                    <input
+                        type="password"
+                        placeholder= "Password"
+                        value={password}
+                        autoComplete="new-password"
+                        onChange={(e) => setPassword(e.target.value)}
+                        className="w-full max-w-md px-4 py-3 text-white border-none rounded-lg placeholder-gray bg-hover focus:outline-none focus:ring-none text-12px"
+                        required
+                    />
+                </div>
+            </div>
+            <div className='mb-4'>
+                <Button type="submit" text ="Create Account" />
+            </div>
+            
+            
+            </form>
+        
             
        </div>
 
         
         <div className='mb-2'>
-            <div className='mb-4'>
-                <Button type="submit" text ="Create Account" />
-            </div>
             
             <div className='flex justify-center gap-2 text-center'>
                 <div>

@@ -16,6 +16,7 @@ module.exports = {
         gray : 'rgb(212, 211, 209)',
         lightgray : 'rgba(128, 128, 128, 0.1)',
         hovergray :'rgb(30, 40, 40)',
+        bordergray : 'rgb(60,60,60)',
 
         
       },
