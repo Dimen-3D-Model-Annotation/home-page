@@ -13,4 +13,6 @@
     `npm install`
 5. Run the server
     `npm run dev`
+npm install react-icons
+npm install three
 
