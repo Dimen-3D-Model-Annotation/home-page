@@ -25,7 +25,7 @@ export default function Nav() {
             Pricing
           </Link>
           <Link href="/about-us" className="hover:text-theme1">
-            About Us
+            Our Features
           </Link>
           <Link href="/contact-us" className="hover:text-theme1">
             Contact Us
