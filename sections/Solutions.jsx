@@ -22,7 +22,7 @@ const sampleCards = [
   },
   {
     image: "/assets/images/solution4.svg",
-    topic: "Enhanced Communication ",
+    topic: "Enhanced \n Communication ",
     description: "With our unique annotation tool, team members can effectively work towards enhancing their 3D models getting feedback via the annotation tool.",
   },
   {
@@ -32,7 +32,7 @@ const sampleCards = [
   },
   {
     image: "/assets/images/solution6.svg",
-    topic: "Streamline the design process",
+    topic: "Streamline the \n design process",
     description: "3D model making will no longer be a hassle with the options Dimens brings to you, where you can easily achieve your goals.",
   },
 ];
