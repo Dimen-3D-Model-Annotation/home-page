@@ -1,6 +1,8 @@
 import Nav from "@/components/Nav";
 import Hero from "@/sections/Hero";
 import Solutions from "@/sections/Solutions";
+import Pricing from "@sections/Pricing";
+
 
 
 
@@ -16,6 +18,7 @@ export default function Home() {
       <div>
         <Hero />
         <Solutions />
+        <Pricing />
       </div>
     </main>
   );
