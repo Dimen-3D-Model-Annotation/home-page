@@ -15,7 +15,7 @@ export default function Features() {
   ];
 
   return (
-    <section className="py-20 text-center bg-nav">
+    <section id="feature" className="py-20 text-center bg-nav">
       <h2 className="text-theme1 text-4xl font-bold mb-10">Our Features</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pl-80 pr-80">
         {features.map((feature, index) => (
