@@ -56,7 +56,7 @@ export default function Solutions() {
   }, []);
 
   return (
-    <section className="bg-nav py-20 text-center">
+    <section id="solution" className="bg-nav py-20 text-center">
       <h2 className="text-theme1 text-4xl font-bold mb-10">Our Solutions</h2>
       <div className="relative flex justify-center items-center px-32">
         <button onClick={handlePrev} className="absolute left-0 z-10 p-2 text-theme1" style={{ paddingLeft: '32px' }}>

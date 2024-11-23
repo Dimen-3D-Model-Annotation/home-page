@@ -12,7 +12,7 @@ export default function Pricing() {
   };
 
   return (
-    <section className="py-20 text-center bg-black">
+    <section id="pricing" className="py-20 text-center bg-black">
       <h2 className="text-theme1 text-4xl font-bold mb-10">Pricing</h2>
 
       <div className="mb-10 flex justify-center">
