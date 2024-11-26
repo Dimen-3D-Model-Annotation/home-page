@@ -15,4 +15,6 @@
     `npm run dev`
 npm install react-icons
 npm install three
+npm install three @react-three/drei
+
 
