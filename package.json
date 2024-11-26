@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@module-federation/nextjs-mf": "^8.8.1",
     "amazon-cognito-identity-js": "^6.3.12",
     "aws-sdk": "^2.1664.0",
     "axios": "^1.7.2",
